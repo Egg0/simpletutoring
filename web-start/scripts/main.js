@@ -164,7 +164,7 @@ FriendlyChat.prototype.saveImageMessage = function(event) {
 FriendlyChat.prototype.signIn = function() {
   // TODO(DEVELOPER): Sign in Firebase with credential from the Google user.
   var provider = new firebase.auth.GoogleAuthProvider();
-  this.auth.signInWithPopup(provider).then(console.log("loggedin"));
+  this.auth.signInWithPopup(provider);
 };
 
 // Signs-out of Friendly Chat.
@@ -231,6 +231,7 @@ FriendlyChat.prototype.saveMessagingDeviceToken = function() {
       // Saving the Device Token to the datastore.
       firebase.database().ref('/fcmTokens').child(currentToken)
           .set(firebase.auth().currentUser.uid);
+      
     } else {
       // Need to request permissions to show notifications.
       this.requestNotificationsPermissions();
