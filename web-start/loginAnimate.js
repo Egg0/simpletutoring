@@ -13,3 +13,4 @@ function onSignIn(googleUser) {
         
     }
   }
+});
