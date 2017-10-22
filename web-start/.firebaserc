@@ -1,5 +1,6 @@
 {
   "projects": {
-    "friendlychat": "friendlychat-d12bb"
+    "friendlychat": "friendlychat-d12bb",
+    "SimplyTutoring": "friendlychat-d12bb"
   }
 }
